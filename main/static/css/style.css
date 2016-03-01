@@ -105,13 +105,6 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-#nav-sub  a img {
-    width: 25px;
-    height: 25px;
-    padding-right: 10px;
-}
-
 #nav-left-container {
     list-style: none;
 }
@@ -138,6 +131,31 @@
 #content {
     width: 100%;
     overflow: hidden;
+    z-index: 0;
+}
+
+/* Divisions */
+
+#division-container {
+    max-width: 800px;
+    height: 200px;
+}
+
+.division-entry {
+    position: relative;
+    display: inline-flex;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.division-background {
+    position: absolute;
+    width: 200px;
+    height: 200px;
     z-index: 0;
 }
 

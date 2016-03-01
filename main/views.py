@@ -5,8 +5,17 @@ from .models import Item, Division
 
 
 def display_items(request, name):
-    items = Item.objects.filter(division__name = name)
+    items = Item.objects.filter(division__name=name)
     context = {
         'items': items
     }
-    return render(request, 'catalog_list.html', context=context)
+    return render(request=request, template_name='catalog_list.html', context=context)
+
+
+def catalog(request):
+    items = Division.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request=request, template_name='catalog.html', context=context)
+

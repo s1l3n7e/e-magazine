@@ -1,11 +1,13 @@
 {% extends 'index.html' %}
 {% block nav %}
-    <div class="content-sub-container">
-    <div class="content-sub-menu">
-        <div class="menu-sub-line">
-            <div class="menu-sub" id="button-solar">Солнечные батареи</div>
-        </div>
-        </div>
-    </div>
-</div>
+    <section id="division-container">
+        {% for entry in items %}
+            <a href="/{{ entry.name }}/">
+            <img class="division-background" src="{{ entry.image.url }}">
+                <div class="division-entry">
+                    {{ entry.name }}
+                </div>
+            </a>
+        {% endfor %}
+    </section>
 {% endblock %}
