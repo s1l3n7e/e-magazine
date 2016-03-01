@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1hTwaVfEK6KpEJnQk-T8mybN_j5UP0CA&callback=initMap"></script>
+    <link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet">
+    <script src="{% static "js/jquery-2.2.0.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+</head>
+<body>
+<div id="head">
+    <div id="head-shadow">
+    </div>
+    <div id="logo">Liberty</div>
+</div>
+<ul id="nav">
+    <ul id="nav-left-container">
+        <li class="nav-left" id="button-contacts"><a href="#" class="nav-links">КОНТАКТЫ</a></li>
+        <li class="nav-left" id="button-catalog"><a href="#" class="nav-links" id="nav-cat">КАТАЛОГ</a></li>
+    </ul>
+    <div id="nav-shadow"></div>
+</ul>
+<div id="split">
+    <span id="slogan">Реализация, инсталляция, модернизация и ремонт защищенных автоматизированных систем</span>
+</div>
+    {% block nav %}
+    {% endblock %}
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+    </div>
+<div id="contacts">
+    <div id="phone">
+        <div id="phone-header">Наши контакты:</div>
+        <div id="phone-number">+7 (351) 248-37-62</div>
+        <div id="emails">2483762@gmail.com<br>+7(351) 222-88-88 (3003)</div>
+    </div>
+</div>
+<div id="map">
+    <div id="map-header">Схема проезда:</div>
+    <div id="map-container"></div>
+</div>
+<div id="footer">
+    <div id="copyright">
+        <span id="copy-name">Либерти Урал</span>
+        <span id="copy-org">ООО "Колибри"</span>
+        <span class="phones">+7 (351) 248-37-62</span>
+        <span class="phones">+7 (351) 222-88-88 (3003)</span>
+    </div>
+    <div id="footer-add">
+        Челябинск, Россия<br>
+        454085, Новоградский проспект, 64<br>
+        2483762@gmail.com
+    </div>
+</div>
+</body>
+</html>

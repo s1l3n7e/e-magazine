@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="sub-content" id="solar-catalog">
+        <div class="content-header-container">
+            <div class="content-header">Автономное резервное энергоснабжение необходимо для  бесперебойного электропитания жизненно важных инженерных систем любого объекта. Внезапные отключения сети особенно критичны для автоматических систем тепло и водоснабжения (автономных котлов), охранного оборудования и т.д. Автономное электроснабжение на солнечных батареях позволяет построить свою энергонезависимую систему в любом удобном для Вас месте</div>
+        </div>
+        <div class="content-catalog">
+            <div class="content-catalog-block">
+                {% for entry in items %}
+                <div class="content-catalog-inline">
+                    <span class="content-catalog-header">{{ entry.name }}</span>
+                    <span class="content-catalog-sub-header">{{ entry.header }}</span>
+                    <span class="content-catalog-text">{{ entry.description }}</span>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}
